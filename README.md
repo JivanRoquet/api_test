@@ -21,12 +21,13 @@ gunicorn application:app -b 127.0.0.1:5000
 
 ### Tools used
 
-- SQLite3 - https://sqlite.org/
-- SQLAlchemy - http://www.sqlalchemy.org/
-- Gunicorn - http://gunicorn.org/
-- Flask-Classful - http://flask-classful.teracy.org/
-- Marshmallow - https://marshmallow.readthedocs.io/
-- Webargs - https://webargs.readthedocs.io/
+- SQLite3 - file-based database engine - https://sqlite.org/
+- SQLAlchemy - SQL ORM - http://www.sqlalchemy.org/
+- Gunicorn - http server - http://gunicorn.org/
+- Flask-Classful - resource-based views - http://flask-classful.teracy.org/
+- Marshmallow - schema-based object serializer - https://marshmallow.readthedocs.io/
+- Webargs - http request arguments parser - https://webargs.readthedocs.io/
+- MyPy - static type checker - http://mypy-lang.org/
 
 ### Notes
 
