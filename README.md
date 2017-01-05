@@ -19,6 +19,9 @@ python db_seed.py
 gunicorn application:app -b 127.0.0.1:5000
 ```
 
+Any time the database needs to be restored to its initial seeded state, simply call `python db_seed.py`.
+This command will erase everything and build a new seed from scratch.
+
 ### Tools used
 
 - SQLite3 - file-based database engine - https://sqlite.org/
