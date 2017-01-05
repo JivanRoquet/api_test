@@ -4,7 +4,7 @@
 
 ```shell
 # clone the repository
-git clone [this_repo_url] api_test
+git clone https://github.com/JivanRoquet/api_test api_test
 cd api_test
 
 # setup Python3 virtual environment
@@ -34,4 +34,4 @@ Some liberties have been taken with the specs in order to be fully compliant to 
   by another one, deleting the previous one
 - Successful `POST` and `PATCH` must return `201` and not `200`
 
-All of the modifications above have been ported into the `tests.postman` file provided in this repository.
+All the modifications above have been ported into the `tests.postman` file provided in this repository.
