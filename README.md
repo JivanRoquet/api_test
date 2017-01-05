@@ -19,6 +19,15 @@ python db_seed.py
 gunicorn application:app -b 127.0.0.1:5000
 ```
 
+### Tools used
+
+- SQLite3 - https://sqlite.org/
+- SQLAlchemy - http://www.sqlalchemy.org/
+- Gunicorn - http://gunicorn.org/
+- Flask-Classful - http://flask-classful.teracy.org/
+- Marshmallow - https://marshmallow.readthedocs.io/
+- Webargs - https://webargs.readthedocs.io/
+
 ### Notes
 
 Some liberties have been taken with the specs in order to be fully compliant to the REST standard:

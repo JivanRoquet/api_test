@@ -3,7 +3,7 @@ from typing import Dict
 
 from flask import make_response
 
-def api_response(data: Dict, code: int, headers: dict=None):
+def api_response(data: str, code: int, headers: dict=None):
     """
     Marshalls a view method response to JSON format and Content-Type
     """
