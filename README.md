@@ -38,8 +38,9 @@ Some liberties have been taken with the specs in order to be fully compliant to 
   - `POST /product` becomes `POST /products/`
   - `GET /product/3` becomes `GET /products/3`
   - `GET /products` stays the same
-- `PUT` has been replaced by `PATCH` since the spec is to update one or more fields of a product,
-  which is the role dedicated to `PATCH`, whereas `PUT` is used to completely replace one product
+- `PUT` has been replaced by `PATCH` since the spec is to update one or more fields of an existing product,
+  without replacing the product completely.
+  This is a role dedicated to `PATCH`, whereas `PUT` is used to completely replace one product
   by another one, deleting the previous one
 - Successful `POST` must return `201` (object created) and not `200`
 
