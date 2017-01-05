@@ -1,9 +1,14 @@
 click==6.6
 Flask==0.12
 Flask-Classful==0.13.1
+Flask-SQLAlchemy==2.1
+gunicorn==19.6.0
 itsdangerous==0.24
 Jinja2==2.8.1
 MarkupSafe==0.23
 marshmallow==2.10.5
+mypy-lang==0.4.6
+SQLAlchemy==1.1.4
+typed-ast==0.6.1
 webargs==1.5.1
 Werkzeug==0.11.15
