@@ -23,7 +23,7 @@ gunicorn --reload application:app -b 127.0.0.1:5000
 
 Some liberties have been taken with the specs in order to be fully compliant to the REST standard:
 
-- all `/product` routes have been changed to `/products`
+- all `/product` routes have been changed to `/products` in order to have one single route for one single resource
 - a trailing slash has been added to all ending roots except `GET`
 - See following examples for the two rules above:
   - `POST /products` becomes `POST /products/`
