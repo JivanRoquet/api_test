@@ -80,7 +80,7 @@ class ProductsView(FlaskView):
         if product is not None:
             db.session.delete(product)
             db.session.commit()
-            return {'success': 'deleted {}'.format(product.id)}, 201
+            return {'success': 'deleted {}'.format(product.id)}, 200
 
         else:
             # product not found
