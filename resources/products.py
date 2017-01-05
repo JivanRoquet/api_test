@@ -15,6 +15,7 @@ class ProductsView(FlaskView):
     """
     representations = {'application/json': utils.api_response}
 
+    @route('/', methods=['GET'])
     def index(self):
         """ Lists all products """
         products = ProductModel.query.all()
@@ -43,7 +44,7 @@ class ProductsView(FlaskView):
         product = ProductModel(name=name, price=price)
         db.session.add(product)
         db.session.commit()
-        return "ok", 201
+        return "created {}".format(product.id), 201
 
 
     @route('/<id>', methods=['PATCH'])
@@ -63,7 +64,7 @@ class ProductsView(FlaskView):
                 product.name = kwargs['price']
 
             db.session.commit()
-            return "ok", 201
+            return "updated {}".format(product.id), 201
 
         else:
             # product not found
@@ -78,11 +79,11 @@ class ProductsView(FlaskView):
         if product is not None:
             db.session.delete(product)
             db.session.commit()
-            return "ok", 200
+            return "deleted {}".format(product.id), 200
 
         else:
             # product not found
             return "NotFound", 404
 
 
-ProductsView.register(app)
+ProductsView.register(app, route_base='/v1/products/')
