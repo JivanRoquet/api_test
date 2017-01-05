@@ -16,7 +16,7 @@ pip install -r requirements.txt
 python db_seed.py
 
 # launch the application
-gunicorn --reload application:app -b 127.0.0.1:5000
+gunicorn application:app -b 127.0.0.1:5000
 ```
 
 ### Notes
