@@ -41,6 +41,6 @@ Some liberties have been taken with the specs in order to be fully compliant to 
 - `PUT` has been replaced by `PATCH` since the spec is to update one or more fields of a product,
   which is the role dedicated to `PATCH`, whereas `PUT` is used to completely replace one product
   by another one, deleting the previous one
-- Successful `POST` and `PATCH` must return `201` and not `200`
+- Successful `POST` must return `201` (object created) and not `200`
 
 All the modifications above have been ported into the `tests.postman` file provided in this repository.

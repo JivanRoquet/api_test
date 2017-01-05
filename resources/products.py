@@ -65,7 +65,7 @@ class ProductsView(FlaskView):
                 product.name = kwargs['price']
 
             db.session.commit()
-            return {'success': 'updated {}'.format(product.id)}, 201
+            return {'success': 'updated {}'.format(product.id)}, 200
 
         else:
             # product not found

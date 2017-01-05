@@ -115,7 +115,7 @@
             ],
             "dataMode": "params",
             "version": 2,
-            "tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+            "tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
             "currentHelper": "normal",
             "helperAttributes": {},
             "time": 1456271397188,
