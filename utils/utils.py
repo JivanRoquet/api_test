@@ -1,9 +1,12 @@
 import json
-from typing import Dict
+from typing import TypeVar, List, Dict
 
 from flask import make_response
 
-def api_response(data: str, code: int, headers: dict=None):
+Data = TypeVar('Data', Dict, List[Dict])
+
+
+def api_response(data: Data, code: int, headers: dict=None):
     """
     Marshalls a view method response to JSON format and Content-Type
     """
