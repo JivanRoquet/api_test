@@ -6,7 +6,7 @@ from application import app, db
 from models.product import Product as ProductModel
 from utils import utils
 from args import products_args
-from schema.products_schema import ProductSchema
+from schema.products_schema import ProductSchema, schema_dump
 
 
 class ProductsView(FlaskView):
@@ -16,17 +16,11 @@ class ProductsView(FlaskView):
     """
     representations = {'application/json': utils.api_response}
 
-    @classmethod
-    def dump_schema(self, product):
-        """ Returns a schema-dumped product """
-        return ProductSchema().dump(product).data
-
-
     @route('/', methods=['GET'])
     def index(self) -> Tuple[List[Dict], int]:
         """ Lists all products """
         products = ProductModel.query.all()
-        data = [self.dump_schema(product) for product in products]
+        data = [schema_dump(product) for product in products]
         return data, 200
 
 
@@ -36,7 +30,7 @@ class ProductsView(FlaskView):
         product = ProductModel.query.get(id)
 
         if product is not None:
-            data = self.dump_schema(product)
+            data = schema_dump(product)
             return data, 200
 
         else:
